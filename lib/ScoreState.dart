@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:placar/Score.dart';
 import 'package:placar/ScoreTile.dart';
+import 'package:wakelock/wakelock.dart';
 
 class ScoreState extends State<Score> {
 
@@ -13,7 +14,7 @@ class ScoreState extends State<Score> {
     SystemChrome.setPreferredOrientations([
       DeviceOrientation.landscapeRight,
     ]);
-
+    Wakelock.enable();
     return Scaffold(
       body: Stack(children: [
         Positioned(child: Center(child: Row(children: [
